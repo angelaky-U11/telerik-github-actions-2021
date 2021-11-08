@@ -15,8 +15,6 @@ jobs:
         SLACK_TITLE: Post Title
         SLACK_USERNAME: Devops Bot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SITE_NAME: staging
-        SITE_URL: http://myapp.staging.com
         SHOW_ACTIONS_URL: true
         SHOW_REF: true
         SHOW_EVENT: true
