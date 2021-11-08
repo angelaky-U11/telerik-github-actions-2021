@@ -14,7 +14,7 @@ jobs:
         SLACK_MESSAGE: 'Post Content :rocket:'
         SLACK_TITLE: Post Title
         SLACK_USERNAME: Devops Bot
-        SLACK_WEBHOOK: ${{https://hooks.slack.com/services/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}}
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
         SITE_NAME: staging
         SITE_URL: http://myapp.staging.com
         SHOW_ACTIONS_URL: true
