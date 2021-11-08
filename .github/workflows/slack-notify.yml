@@ -1,0 +1,22 @@
+on: push
+name: Slack Notification Demo
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: partnerhero/action-webhook-slack-notify@v2.1.0
+      env:
+        SLACK_CHANNEL: general
+        SLACK_COLOR: '#3278BD'
+        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_TITLE: Post Title
+        SLACK_USERNAME: Devops Bot
+        SLACK_WEBHOOK: ${{https://hooks.slack.com/services/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}}
+        SITE_NAME: staging
+        SITE_URL: http://myapp.staging.com
+        SHOW_ACTIONS_URL: true
+        SHOW_REF: true
+        SHOW_EVENT: true
