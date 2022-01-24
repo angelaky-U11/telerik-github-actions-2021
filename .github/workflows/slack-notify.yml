@@ -12,5 +12,5 @@ jobs:
         SLACK_CHANNEL: devops-final-project
         SLACK_COLOR: '#3278BD'
         SLACK_ICON: https://github.com/rtCamp.png?size=48
-        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_MESSAGE: 'Ala Bala Post Content :rocket:'
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
