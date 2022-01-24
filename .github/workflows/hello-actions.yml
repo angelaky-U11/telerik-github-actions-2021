@@ -1,8 +1,12 @@
-name: learn-github-actions
-on: [push]
-jobs: 
-  hello-actions:
+on: pull_request
+name: Slack Notification for new PR
+jobs:
+  slackNotification:
+    name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: echo "This is our first Github Workflow!"
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: partnerhero/action-webhook-slack-notify@v2.1.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
